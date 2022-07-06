@@ -180,6 +180,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                       ),
+                      // Generated code for this TextField Widget...
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: TextFormField(
@@ -199,6 +200,12 @@ class _RegisterPageState extends State<RegisterPage> {
                               fontSize: 17,
                             ),
                             hintText: 'Masukkan Kata Sandi',
+                            hintStyle: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
+                            ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0xFFFFAF00),
@@ -240,6 +247,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                       ),
+
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: ElevatedButton(
