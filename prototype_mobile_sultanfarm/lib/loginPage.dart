@@ -126,6 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       keyboardType: TextInputType.number,
                     ),
+                    // Generated code for this TextField Widget...
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: TextFormField(
@@ -145,6 +146,12 @@ class _LoginPageState extends State<LoginPage> {
                             fontSize: 17,
                           ),
                           hintText: 'Masukkan Kata Sandi',
+                          hintStyle: GoogleFonts.getFont(
+                            'Poppins',
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 17,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xFFFFAF00),
@@ -186,6 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
+
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: ElevatedButton(
