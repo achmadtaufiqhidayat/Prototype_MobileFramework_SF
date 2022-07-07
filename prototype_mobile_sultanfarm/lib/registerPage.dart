@@ -251,7 +251,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginPage()));
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xFFFFAF00),
                             onPrimary: Colors.white,

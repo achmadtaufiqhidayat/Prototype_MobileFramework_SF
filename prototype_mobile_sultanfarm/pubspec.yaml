@@ -37,6 +37,9 @@ dependencies:
   easy_debounce: ^2.0.2+1
   google_fonts: ^3.0.1
   page_transition: ^2.0.9
+ 
+
+
 
 dev_dependencies:
   flutter_test:
