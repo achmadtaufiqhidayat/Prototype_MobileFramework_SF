@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prototype_mobile_sultanfarm/controller/Bottom_Nav.dart';
 import 'package:prototype_mobile_sultanfarm/loginPage.dart';
+import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:prototype_mobile_sultanfarm/view/SplashScreen.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: SplashScreen(),
+      home: Home(),
     );
   }
 }
