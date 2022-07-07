@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prototype_mobile_sultanfarm/loginPage.dart';
+import 'package:prototype_mobile_sultanfarm/view/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: LoginPageWidget(),
+      home: SplashScreen(),
     );
   }
 }
