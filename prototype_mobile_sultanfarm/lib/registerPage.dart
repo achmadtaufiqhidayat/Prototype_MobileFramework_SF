@@ -316,7 +316,13 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       5, 40, 5, 0),
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  LoginPageWidget()));
+                                    },
                                     style: ElevatedButton.styleFrom(
                                       primary: Color(0xFFFFAF00),
                                       onPrimary: Colors.white,

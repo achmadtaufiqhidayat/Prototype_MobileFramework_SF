@@ -1,6 +1,10 @@
 import 'package:prototype_mobile_sultanfarm/registerPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:prototype_mobile_sultanfarm/controller/Bottom_Nav.dart';
+import 'package:prototype_mobile_sultanfarm/registerPage.dart';
+import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 
 class LoginPageWidget extends StatefulWidget {
   const LoginPageWidget({Key? key}) : super(key: key);
@@ -278,12 +282,17 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     ],
                                   ),
                                 ),
-
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       5, 40, 5, 0),
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  BottomNav()));
+                                    },
                                     style: ElevatedButton.styleFrom(
                                       primary: Color(0xFFFFAF00),
                                       onPrimary: Colors.white,
