@@ -4,6 +4,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:prototype_mobile_sultanfarm/controller/Bottom_Nav.dart';
 import 'package:prototype_mobile_sultanfarm/registerPage.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 
@@ -205,7 +206,7 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Home()));
+                                      builder: (context) => BottomNav()));
                             },
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xFFFFAF00),
