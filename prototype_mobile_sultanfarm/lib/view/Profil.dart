@@ -1,108 +1,6 @@
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/model/ColorPallet.dart';
 import 'package:flutter/material.dart';
-// class Profil extends StatefulWidget {
-//   const Profil({Key? key}) : super(key: key);
-
-//   @override
-//   State<Profil> createState() => _ProfilState();
-// }
-
-// class _ProfilState extends State<Profil> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         width: double.infinity,
-//         height: double.infinity,
-//         child: ListView(
-//           children: <Widget>[
-//             Center(
-//               child: Container(
-//                 // width: 100,
-//                 // height: 100,
-//                 margin:
-//                     EdgeInsets.only(top: 80, bottom: 20, left: 10, right: 10),
-//                 child: CircleAvatar(
-//                     backgroundImage: AssetImage('/images/man.png'),
-//                     backgroundColor: Color(0xFFFFAF00),
-//                     maxRadius: 75.0),
-//               ),
-//             ),
-//             Text(
-//               'Nama Pengguna',
-//               textAlign: TextAlign.center,
-//               style: GoogleFonts.getFont('Poppins',
-//                   color: Color(0xFFFFAF00),
-//                   fontWeight: FontWeight.w600,
-//                   fontSize: 24),
-//             ),
-//             Text(
-//               "08xxxxx",
-//               textAlign: TextAlign.center,
-//               style: GoogleFonts.getFont('Poppins',
-//                   color: Color(0xFFFFAF00),
-//                   fontWeight: FontWeight.w300,
-//                   fontSize: 18),
-//             ),
-//             SizedBox(
-//               height: 20,
-//             ),
-//             Container(
-//               color: Color(0xFFFFAF00),
-//               child: Text(
-//                 "Riwayat Investasi",
-//                 textAlign: TextAlign.center,
-//                 style: GoogleFonts.getFont('Poppins',
-//                     color: color_bg, fontSize: 16, fontWeight: FontWeight.bold),
-//               ),
-//             ),
-//             Container(
-//               child: Row(
-//                 children: <Widget>[
-//                   Container(
-//                       margin:
-//                           EdgeInsets.only(top: 1, bottom: 1, left: 4, right: 4),
-//                       child: Padding(padding: EdgeInsets.all(3))),
-//                   SizedBox(
-//                     width: 20,
-//                   ),
-//                   Text(
-//                     "Konfrmasi",
-//                     textAlign: TextAlign.center,
-//                     style: GoogleFonts.getFont("Poppins",
-//                         color: Color(0xFFFFAF00),
-//                         fontSize: 15,
-//                         fontWeight: FontWeight.bold),
-//                   ),
-//                   SizedBox(
-//                     width: 20,
-//                   ),
-//                   Text("Diproses",
-//                       textAlign: TextAlign.center,
-//                       style: GoogleFonts.getFont("Poppins",
-//                           color: Color(0xFFFFAF00),
-//                           fontSize: 15,
-//                           fontWeight: FontWeight.bold)),
-//                   SizedBox(
-//                     width: 20,
-//                   ),
-//                   Text("Selesai",
-//                       textAlign: TextAlign.center,
-//                       style: GoogleFonts.getFont("Poppins",
-//                           color: Color(0xFFFFAF00),
-//                           fontSize: 15,
-//                           fontWeight: FontWeight.bold))
-//                 ],
-//               ),
-//             )
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 class ProfilePage1 extends StatelessWidget {
   const ProfilePage1({Key? key}) : super(key: key);
@@ -245,13 +143,14 @@ class _TopPortion extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.black,
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                          'https://cdn-icons.flaticon.com/png/512/4140/premium/4140047.png?token=exp=1657597510~hmac=d3307ee26ea3a997456791624d8a6935'),
+                      image: Image.asset(
+                        'images/woman.png',
+                      ).image,
                     ),
                   ),
                 ),

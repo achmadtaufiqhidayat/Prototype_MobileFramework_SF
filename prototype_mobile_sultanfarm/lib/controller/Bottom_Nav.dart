@@ -46,7 +46,7 @@ class _BottomNavState extends State<BottomNav> {
                   ),
                 ),
                 GButton(
-                  icon: Icons.list_rounded,
+                  icon: Icons.local_convenience_store,
                   text: 'Domba',
                   textStyle: GoogleFonts.getFont(
                     'Poppins',
