@@ -15,7 +15,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int curIndex = 0;
-  final List<Widget> body = [Home(), Domba(), Profil()];
+  final List<Widget> body = [Home(), Domba(), ProfilePage1()];
 
   @override
   Widget build(BuildContext context) {
