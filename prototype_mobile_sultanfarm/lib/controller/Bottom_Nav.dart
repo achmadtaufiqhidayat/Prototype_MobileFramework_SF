@@ -15,7 +15,8 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int curIndex = 0;
-  final List<Widget> body = [Home(), Domba(), Profil()];
+
+  final List<Widget> body = [Home(), Domba(), ProfilePage1()];
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class _BottomNavState extends State<BottomNav> {
                   ),
                 ),
                 GButton(
-                  icon: Icons.list_rounded,
+                  icon: Icons.local_convenience_store,
                   text: 'Domba',
                   textStyle: GoogleFonts.getFont(
                     'Poppins',
