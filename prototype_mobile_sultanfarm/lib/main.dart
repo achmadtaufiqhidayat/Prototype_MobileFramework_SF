@@ -4,6 +4,7 @@ import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
 import 'package:prototype_mobile_sultanfarm/loginPage.dart';
 import 'package:prototype_mobile_sultanfarm/view/Domba.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
+import 'package:prototype_mobile_sultanfarm/view/Profil.dart';
 import 'package:prototype_mobile_sultanfarm/view/SplashScreen.dart';
 
 void main() {
