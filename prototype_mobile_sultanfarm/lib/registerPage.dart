@@ -39,7 +39,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: Image.asset(
-              'assets/images/domba.jpg',
+              'images/bg_loginregister.jpg',
             ).image,
           ),
         ),
@@ -69,7 +69,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Image.asset(
-                            'assets/images/logo.png',
+                            'images/logo.png',
                           ),
                         ),
                         Expanded(
