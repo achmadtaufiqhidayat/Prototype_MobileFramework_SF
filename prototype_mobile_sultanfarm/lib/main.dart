@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prototype_mobile_sultanfarm/controller/Bottom_Nav.dart';
+import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
 import 'package:prototype_mobile_sultanfarm/loginPage.dart';
 import 'package:prototype_mobile_sultanfarm/view/Domba.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
@@ -18,9 +19,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-
-      home: SplashScreen(),
+      title: 'Sultan Farm',
+      home: Home(),
     );
   }
 }
