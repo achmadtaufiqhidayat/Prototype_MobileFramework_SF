@@ -32,7 +32,7 @@ class _menuDombaState extends State<menuDomba> {
           },
         ),
         title: Text(
-          'Domba',
+          'Jenis Domba',
           style: GoogleFonts.getFont(
             'Poppins',
             color: Colors.white,
@@ -82,7 +82,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/artikel1.jpg',
+                                          'images/domba/domba-batur.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -92,7 +92,7 @@ class _menuDombaState extends State<menuDomba> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 8, 0, 0),
                                         child: Text(
-                                          'Dormas ',
+                                          'Batur',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.getFont(
                                             'Poppins',
@@ -159,7 +159,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/artikel1.jpg',
+                                          'images/domba/domba-texel.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -169,7 +169,7 @@ class _menuDombaState extends State<menuDomba> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 8, 0, 0),
                                         child: Text(
-                                          'Dormas ',
+                                          'Texel',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.getFont(
                                             'Poppins',
@@ -245,7 +245,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/artikel1.jpg',
+                                          'images/domba/domba-sopas.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -255,7 +255,7 @@ class _menuDombaState extends State<menuDomba> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 8, 0, 0),
                                         child: Text(
-                                          'Dormas ',
+                                          'Sopas',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.getFont(
                                             'Poppins',
@@ -322,7 +322,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/artikel1.jpg',
+                                          'images/domba/domba-merino.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -332,7 +332,333 @@ class _menuDombaState extends State<menuDomba> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 8, 0, 0),
                                         child: Text(
-                                          'Dormas ',
+                                          'Merino',
+                                          textAlign: TextAlign.start,
+                                          style: GoogleFonts.getFont(
+                                            'Poppins',
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                height: 180,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                detailJenisDomba()));
+                                  },
+                                  child: Text(
+                                    '',
+                                  ),
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.transparent,
+                                    maximumSize: Size(130, 40),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: Colors.white,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Image.asset(
+                                          'images/domba/domba-dormas-super.jpg',
+                                          width: double.infinity,
+                                          height: 120,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 8, 0, 0),
+                                        child: Text(
+                                          'Dormas Super',
+                                          textAlign: TextAlign.start,
+                                          style: GoogleFonts.getFont(
+                                            'Poppins',
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                height: 180,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                detailJenisDomba()));
+                                  },
+                                  child: Text(
+                                    '',
+                                  ),
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.transparent,
+                                    maximumSize: Size(130, 40),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: Colors.white,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Image.asset(
+                                          'images/domba/domba-crossing-dormas.jpg',
+                                          width: double.infinity,
+                                          height: 120,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 8, 0, 0),
+                                        child: Text(
+                                          'Crossing Dormas',
+                                          textAlign: TextAlign.start,
+                                          style: GoogleFonts.getFont(
+                                            'Poppins',
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                height: 180,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                detailJenisDomba()));
+                                  },
+                                  child: Text(
+                                    '',
+                                  ),
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.transparent,
+                                    maximumSize: Size(130, 40),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: Colors.white,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Image.asset(
+                                          'images/domba/domba-lokal.jpg',
+                                          width: double.infinity,
+                                          height: 120,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 8, 0, 0),
+                                        child: Text(
+                                          'Lokal',
+                                          textAlign: TextAlign.start,
+                                          style: GoogleFonts.getFont(
+                                            'Poppins',
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                height: 180,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                detailJenisDomba()));
+                                  },
+                                  child: Text(
+                                    '',
+                                  ),
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.transparent,
+                                    maximumSize: Size(130, 40),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: Colors.white,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Image.asset(
+                                          'images/domba/domba-crossing-lokal.png',
+                                          width: double.infinity,
+                                          height: 120,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 8, 0, 0),
+                                        child: Text(
+                                          'Crossing Lokal',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.getFont(
                                             'Poppins',
