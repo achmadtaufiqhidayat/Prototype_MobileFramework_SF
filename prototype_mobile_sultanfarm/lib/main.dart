@@ -6,6 +6,8 @@ import 'package:prototype_mobile_sultanfarm/view/Domba.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:prototype_mobile_sultanfarm/view/Profil.dart';
 import 'package:prototype_mobile_sultanfarm/view/SplashScreen.dart';
+import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-domba.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-domba.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sultan Farm',
-      home: Home(),
+      home: detailDomba(),
     );
   }
 }

@@ -12,7 +12,7 @@ class navBottom extends StatefulWidget {
 
 class _navBottomState extends State<navBottom> {
   int _selectedIndex = 0;
-  final List<Widget> screens = [Home(), Domba(), Profil()];
+  final List<Widget> screens = [Home(), Domba(), ProfilePage1()];
 
   @override
   Widget build(BuildContext context) {
