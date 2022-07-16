@@ -1,3 +1,4 @@
+import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
 import 'package:prototype_mobile_sultanfarm/registerPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -291,7 +292,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  BottomNav()));
+                                                  navBottom()));
                                     },
                                     style: ElevatedButton.styleFrom(
                                       primary: Color(0xFFFFAF00),
