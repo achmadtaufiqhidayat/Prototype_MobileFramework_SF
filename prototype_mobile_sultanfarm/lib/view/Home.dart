@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-investasi.dart';
-import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-paketbreeding.dart';
-import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-realtimemonitoring.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/Breeding.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-domba.dart';
-
-import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-realtimemonitoring.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,405 +9,326 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final PageController pageViewController = new PageController(initialPage: 0);
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0x1AFFAF00),
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                        child: Image.asset(
-                          'assets/images/logo.png',
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                        child: Text(
-                          'Sultan Farm',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                    ],
+      backgroundColor: Color(0x19FFAF00),
+      body: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Material(
+              color: Colors.transparent,
+              elevation: 2,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15),
+                  topLeft: Radius.circular(0),
+                  topRight: Radius.circular(0),
+                ),
+              ),
+              child: Container(
+                width: double.infinity,
+                height: 140,
+                decoration: BoxDecoration(
+                  color: Color(0xFFFFAF00),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(15),
+                    bottomRight: Radius.circular(15),
+                    topLeft: Radius.circular(0),
+                    topRight: Radius.circular(0),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
-                  child: Material(
-                    color: Colors.transparent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Container(
-                      width: double.infinity,
-                      height: 200,
-                      decoration: BoxDecoration(
-                        color: Color(0x00EEEEEE),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Container(
-                        width: double.infinity,
-                        height: 500,
-                        child: Stack(
-                          children: [
-                            PageView(
-                              controller: pageViewController,
-                              scrollDirection: Axis.horizontal,
-                              //slider-page
-                              children: [
-                                Stack(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(15),
-                                      child: Image.asset(
-                                        'assets/images/slider/slider1.jpg',
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x4D000000),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            15, 100, 15, 0),
-                                        child: Text(
-                                          'Temukan Domba Terbaik Hanya Disini',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Stack(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(15),
-                                      child: Image.asset(
-                                        'assets/images/slider/slider2.jpg',
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x4D000000),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            15, 100, 15, 0),
-                                        child: Text(
-                                          'Pusat Domba Terbaik Dari  Jember',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Stack(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(15),
-                                      child: Image.asset(
-                                        'assets/images/slider/slider3.jpg',
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Container(
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      decoration: BoxDecoration(
-                                        color: Color(0x4D000000),
-                                        borderRadius: BorderRadius.circular(15),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            15, 75, 15, 0),
-                                        child: Text(
-                                          'Indukan, Anakan, Domba Siap Potong, hingga Paket Breeding Tersedia Disini',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.getFont(
-                                            'Poppins',
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 40, 10, 10),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Container(
+                            width: 60,
+                            height: 60,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0, 1),
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                                child: SmoothPageIndicator(
-                                  controller: pageViewController,
-                                  count: 3,
-                                  axisDirection: Axis.horizontal,
-                                  onDotClicked: (i) {
-                                    pageViewController.animateToPage(
-                                      i,
-                                      duration: Duration(milliseconds: 500),
-                                      curve: Curves.ease,
-                                    );
-                                  },
-                                  effect: ExpandingDotsEffect(
-                                    expansionFactor: 3,
-                                    spacing: 5,
-                                    radius: 16,
-                                    dotWidth: 20,
-                                    dotHeight: 5,
-                                    dotColor: Color(0xFF9E9E9E),
-                                    activeDotColor: Color(0xFFFFAF00),
-                                    paintStyle: PaintingStyle.fill,
-                                  ),
-                                ),
+                            child: Image.asset(
+                              'assets/images/logo.png',
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                            child: Text(
+                              'Sultan Farm',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
                               ),
                             ),
-                          ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+                      child: Text(
+                        'Pusat Investasi Peternakan Domba Terbaik di Jember',
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          fontSize: 12,
                         ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
-                Align(
-                  alignment: AlignmentDirectional(-1, 0),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                    child: Text(
-                      'Layanan Aplikasi',
-                      style: GoogleFonts.getFont(
-                        'Poppins',
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 15, 10, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    //menu-button
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                child: DefaultTabController(
+                  length: 2,
+                  initialIndex: 0,
+                  child: Column(
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
-                        child: Container(
-                          width: 110,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            color: Color(0x00EEEEEE),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Material(
-                                color: Colors.transparent,
-                                elevation: 3,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Container(
-                                  width: 80,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: IconButton(
-                                    icon: Icon(
-                                      Icons.pets_rounded,
-                                      color: Color(0xFFFFAF00),
-                                      size: 40,
-                                    ),
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  menuDomba()));
-                                    },
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                child: Text(
-                                  'Jenis Domba',
-                                  style: GoogleFonts.getFont(
-                                    'Poppins',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                      TabBar(
+                        labelColor: Color(0xFFFFAF00),
+                        unselectedLabelColor: Color(0x7FFFAF00),
+                        labelStyle: GoogleFonts.getFont(
+                          'Poppins',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
                         ),
+                        indicatorColor: Color(0xFFFFAF00),
+                        tabs: [
+                          Tab(
+                            text: 'Jenis Domba',
+                          ),
+                          Tab(
+                            text: 'Artikel Singkat',
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
-                        child: Container(
-                          width: 110,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            color: Color(0x00EEEEEE),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Material(
-                                color: Colors.transparent,
-                                elevation: 3,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Container(
-                                  width: 80,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: IconButton(
-                                    icon: Icon(
-                                      Icons.insights_rounded,
-                                      color: Color(0xFFFFAF00),
-                                      size: 40,
-                                    ),
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  BreedingPage1()));
-                                    },
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                child: Text(
-                                  'Paket Breeding',
-                                  style: GoogleFonts.getFont(
-                                    'Poppins',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 110,
-                        height: 130,
-                        decoration: BoxDecoration(
-                          color: Color(0x00EEEEEE),
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
+                      Expanded(
+                        child: TabBarView(
                           children: [
-                            Material(
-                              color: Colors.transparent,
-                              elevation: 3,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Container(
-                                width: 80,
-                                height: 80,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: IconButton(
-                                  icon: Icon(
-                                    Icons.camera_alt,
-                                    color: Color(0xFFFFAF00),
-                                    size: 40,
-                                  ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                menuRealtimeMonitoring()));
-                                  },
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 170,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/biegun-wschodni-vD3L-rN_qNw-unsplash.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: TextButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      '',
+                                                    ),
+                                                    style: TextButton.styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      maximumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 170,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/biegun-wschodni-vD3L-rN_qNw-unsplash.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: TextButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      '',
+                                                    ),
+                                                    style: TextButton.styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      maximumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                              child: Text(
-                                'Realtime\nMonitoring',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.getFont(
-                                  'Poppins',
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 12,
+                                  EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Stack(
+                                        children: [
+                                          Container(
+                                            width: double.infinity,
+                                            height: 200,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/pexels-photo-8345462-copy.jpeg',
+                                                  width: double.infinity,
+                                                  height: 135,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(8, 8, 8, 8),
+                                                  child: Text(
+                                                    'Artikel Paket Breeding ',
+                                                    style: GoogleFonts.getFont(
+                                                      'Poppins',
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      fontSize: 20,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          TextButton(
+                                            onPressed: () {},
+                                            child: Text(
+                                              '',
+                                            ),
+                                            style: TextButton.styleFrom(
+                                              primary: Colors.transparent,
+                                              maximumSize:
+                                                  Size(double.infinity, 200),
+                                              shape: new RoundedRectangleBorder(
+                                                borderRadius:
+                                                    new BorderRadius.circular(
+                                                        8),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -425,253 +338,9 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                Align(
-                  alignment: AlignmentDirectional(-1, 0),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                    child: Text(
-                      'Penjelasan Singkat',
-                      style: GoogleFonts.getFont(
-                        'Poppins',
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                ),
-                //artikel-penjelasan
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Color(0xFFF5F5F5),
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: double.infinity,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
-                                    'assets/images/artikel/artikel1.jpg',
-                                    width: 100,
-                                    height: 100,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      15, 0, 0, 0),
-                                  child: Text(
-                                    'Paket Breeding',
-                                    style: GoogleFonts.getFont(
-                                      'Poppins',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: double.infinity,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Color(0x00EEEEEE),
-                          ),
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          artikelPaketBreeding()));
-                            },
-                            child: Text(
-                              '',
-                            ),
-                            style: TextButton.styleFrom(
-                              primary: Colors.transparent,
-                              maximumSize: Size(130, 40),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 0),
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Color(0xFFF5F5F5),
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: double.infinity,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
-                                    'assets/images/artikel/artikel2.jpeg',
-                                    width: 100,
-                                    height: 100,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      15, 0, 0, 0),
-                                  child: Text(
-                                    'Real-Time Monitoring',
-                                    style: GoogleFonts.getFont(
-                                      'Poppins',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: double.infinity,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Color(0x00EEEEEE),
-                          ),
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          artikelRealtimeMonitoring()));
-                            },
-                            child: Text(
-                              '',
-                            ),
-                            style: TextButton.styleFrom(
-                              primary: Colors.transparent,
-                              maximumSize: Size(130, 40),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 0),
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Color(0xFFF5F5F5),
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: double.infinity,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
-                                    'assets/images/artikel/artikel3.jpg',
-                                    width: 100,
-                                    height: 100,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      15, 0, 0, 0),
-                                  child: Text(
-                                    'Investasi Syariah',
-                                    style: GoogleFonts.getFont(
-                                      'Poppins',
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: double.infinity,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Color(0x00EEEEEE),
-                          ),
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          artikelInvestasi()));
-                            },
-                            child: Text(
-                              '',
-                            ),
-                            style: TextButton.styleFrom(
-                              primary: Colors.transparent,
-                              maximumSize: Size(130, 40),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
