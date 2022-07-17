@@ -296,7 +296,7 @@ class _HomeState extends State<Home> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                 child: Text(
-                                  'Domba',
+                                  'Jenis Domba',
                                   style: GoogleFonts.getFont(
                                     'Poppins',
                                     color: Colors.black,
