@@ -78,8 +78,8 @@ class SecondPage extends StatelessWidget {
   final int heroTag;
   const SecondPage({required this.heroTag});
 
-  _lauchW(String nomor, String pesan) async {
-    String url = "https://wa.me/+62$nomor?text=${Uri.parse(pesan)}";
+  _lauchW(String url) async {
+    // String url ="https://api.whatsapp.com/send/?phone=$nomor?text=$pesan&type=phone_number&app_absent=0";
     await canLaunch(url) ? launch(url) : print("Tidak Bisa Buka WhatsApp");
   }
 
@@ -259,8 +259,14 @@ class SecondPage extends StatelessWidget {
                           fontSize: 20),
                     ),
                     onPressed: () {
-                      _lauchW("85101813779",
-                          "Saya ingin mengetahui lebih lanjut tentang paket domba ini :\n Nama Paket $_Judul[heroTag]");
+                      _lauchW(
+                          "https://api.whatsapp.com/send/?phone=6285101813779&text=Hallo%2C+saya+ingin+mengetahui+lebih+lanjut+tentang+paket+domba+ini\n+Nama+Paket : Paket Breeding " +
+                              _Judul[heroTag] +
+                              ", \nHarga : " +
+                              _Harga[heroTag] +
+                              ", \nSpesifikasi : Dengan harga tersebut " +
+                              _Deskripsi[heroTag] +
+                              ".%2A&type=phone_number&app_absent=0");
                     },
                   ),
                   SizedBox(
@@ -301,8 +307,8 @@ final List<String> _images = [
 ];
 final List<String> _Judul = ['A', 'B', 'C'];
 final List<String> _Deskripsi = [
-  ", anda akan mendapatkan 3 domba jantan dan 6 domba betina yang akan dikelola oleh mudharib (pengelola)",
-  ", anda akan mendapatkan 3 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)",
-  ", anda akan mendapatkan 2 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)"
+  ", Anda akan mendapatkan 3 domba jantan dan 6 domba betina yang akan dikelola oleh mudharib (pengelola)",
+  ", Anda akan mendapatkan 3 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)",
+  ", Anda akan mendapatkan 2 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)"
 ];
 final List<String> _Harga = ["Rp 10.000.000", "Rp 8.000.000", "Rp 6.000.000"];
