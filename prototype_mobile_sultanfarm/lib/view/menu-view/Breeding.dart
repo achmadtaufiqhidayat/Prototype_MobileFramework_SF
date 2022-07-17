@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prototype_mobile_sultanfarm/view/Akad.dart';
 import 'package:prototype_mobile_sultanfarm/view/Profil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -288,7 +289,10 @@ class SecondPage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Akad()));
+                    },
                   ),
                 ],
               ),

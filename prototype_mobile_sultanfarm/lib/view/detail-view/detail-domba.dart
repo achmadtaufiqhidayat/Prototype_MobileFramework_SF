@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-jenisdomba.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class detailDomba extends StatefulWidget {
   const detailDomba({Key? key}) : super(key: key);
@@ -93,7 +94,10 @@ class _detailDombaState extends State<detailDomba> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _lauchW(
+                          "https://api.whatsapp.com/send/?phone=6285101813779&text=Hallo %2C+ Saya ingin mengetahui lebih lanjut tentang domba-domba di Sultanfarm.%2A&type=phone_number&app_absent=0");
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green,
                       onPrimary: Colors.white,
@@ -186,4 +190,9 @@ class _detailDombaState extends State<detailDomba> {
       ),
     );
   }
+}
+
+_lauchW(String url) async {
+  // String url ="https://api.whatsapp.com/send/?phone=$nomor?text=$pesan&type=phone_number&app_absent=0";
+  await canLaunch(url) ? launch(url) : print("Tidak Bisa Buka WhatsApp");
 }
