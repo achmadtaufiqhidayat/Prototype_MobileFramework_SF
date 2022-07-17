@@ -74,18 +74,34 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/images/
-  # - assets/images/logo.png
-  # - assets/images/domba.jpg
-  # - assets/images/bg_domba.jpg
-  # - assets/images/slider1.jpg
-  # - assets/images/slider2.jpg
   - assets/images/logo.png
-  # - assets/images/domba.jpg
-  # - assets/images/bg_domba.jpg
   - assets/images/slider1.jpg
   - assets/images/slider2.jpg
   - assets/images/man.png
-  - assets/images/
+  - assets/images/artikel/
+  - assets/images/artikel/artikel1.jpg
+  - assets/images/artikel/artikel2.jpeg
+  - assets/images/artikel/artikel3.jpg
+  - assets/images/artikel/cctv.jpg
+  - assets/images/artikel/breeding2.jpg
+  - assets/images/artikel/rupiah.jpg
+  - assets/images/domba/
+  - assets/images/domba/domba-batur.jpg
+  - assets/images/domba/domba-batur2.jpeg
+  - assets/images/domba/domba-crossing-dormas.jpg
+  - assets/images/domba/domba-crossing-lokal.png
+  - assets/images/domba/domba-dormas-super.jpg
+  - assets/images/domba/domba-lokal.jpg
+  - assets/images/domba/domba-merino.jpg
+  - assets/images/domba/domba-sopas.jpg
+  - assets/images/domba/domba-texel.jpg
+  - assets/images/slider/
+  - assets/images/slider/slider1.jpg
+  - assets/images/slider/slider2.jpg
+  - assets/images/slider/slider3.jpg
+  - assets/images/slider/paketA.jpg
+  - assets/images/slider/paketB.jpg
+  - assets/images/slider/paketC.jpg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
