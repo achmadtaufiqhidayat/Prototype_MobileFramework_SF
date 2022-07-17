@@ -97,12 +97,14 @@ class SecondPage extends StatelessWidget {
             Center(
               child: Container(
                 child: Card(
-                  borderOnForeground: true,
-                  child: Image.asset(
-                    _images[heroTag],
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                    borderOnForeground: true,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        _images[heroTag],
+                        fit: BoxFit.cover,
+                      ),
+                    )),
               ),
             ),
             SizedBox(
@@ -305,9 +307,9 @@ class SecondPage extends StatelessWidget {
 }
 
 final List<String> _images = [
-  'assets/images/slider/slider2.jpg',
-  'assets/images/slider/slider2.jpg',
-  'assets/images/slider/slider2.jpg'
+  'assets/images/slider/paketA.jpg',
+  'assets/images/slider/paketB.jpg',
+  'assets/images/slider/paketC.jpg'
 ];
 final List<String> _Judul = ['A', 'B', 'C'];
 final List<String> _Deskripsi = [
