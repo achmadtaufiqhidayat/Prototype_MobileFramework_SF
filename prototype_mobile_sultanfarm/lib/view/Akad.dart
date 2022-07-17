@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
+import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cool_alert/cool_alert.dart';
 
 class Akad extends StatefulWidget {
   const Akad({Key? key}) : super(key: key);
@@ -63,29 +66,29 @@ class _AkadState extends State<Akad> {
                   SizedBox(
                     height: 25,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text("Ulangi",
-                        style: GoogleFonts.getFont("Poppins",
-                            fontSize: 14, fontWeight: FontWeight.bold)),
-                    style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFFFAF00),
-                        onPrimary: Colors.white,
-                        minimumSize: Size(100, 50),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        elevation: 3),
-                  ),
+                  // ElevatedButton(
+                  //   onPressed: () {},
+                  //   child: Text("Ulangi",
+                  //       style: GoogleFonts.getFont("Poppins",
+                  //           fontSize: 14, fontWeight: FontWeight.bold)),
+                  //   style: ElevatedButton.styleFrom(
+                  //       primary: Color(0xFFFFAF00),
+                  //       onPrimary: Colors.white,
+                  //       minimumSize: Size(100, 50),
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(10),
+                  //       ),
+                  //       elevation: 3),
+                  // ),
                   SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    "Jika sudah yakin, lakukan pembayaran pada nomor berikut\n 932-1642-8264-5783.\nKemudian kirimkan bukti pembayaran.",
-                    style: GoogleFonts.getFont("Poppins",
-                        color: Colors.black, fontSize: 16),
-                    textAlign: TextAlign.center,
-                  ),
+                  // Text(
+                  //   "Jika sudah yakin, lakukan pembayaran pada nomor berikut\n 932-1642-8264-5783.\nKemudian kirimkan bukti pembayaran.",
+                  //   style: GoogleFonts.getFont("Poppins",
+                  //       color: Colors.black, fontSize: 16),
+                  //   textAlign: TextAlign.center,
+                  // ),
                   SizedBox(
                     height: 100,
                   ),
@@ -94,32 +97,64 @@ class _AkadState extends State<Akad> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       ElevatedButton(
-                          onPressed: () {
-                            _lauchW(
-                                "https://api.whatsapp.com/send/?phone=6285101813779&text=Hallo %2C+ Saya ingin mengkonfirmasi pembayaran.%2A&type=phone_number&app_absent=0");
-                          },
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.green[900],
-                              onPrimary: Colors.white,
-                              minimumSize: Size(100, 50),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              elevation: 3),
-                          child: Text(
-                            "Konfirmasi",
-                            style: GoogleFonts.getFont("Poppins",
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
-                          )),
+                        onPressed: () {},
+                        child: Text(
+                          "Ulangi",
+                          style: GoogleFonts.getFont("Poppins",
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            primary: Color(0xFFFFAF00),
+                            onPrimary: Colors.white,
+                            minimumSize: Size(100, 50),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            elevation: 3),
+                      ),
+                      // ElevatedButton(
+                      //     onPressed: () {
+                      //       _lauchW(
+                      //           "https://api.whatsapp.com/send/?phone=6285101813779&text=Hallo %2C+ Saya ingin mengkonfirmasi pembayaran.%2A&type=phone_number&app_absent=0");
+                      //     },
+                      //     style: ElevatedButton.styleFrom(
+                      //         primary: Colors.green[900],
+                      //         onPrimary: Colors.white,
+                      //         minimumSize: Size(100, 50),
+                      //         shape: RoundedRectangleBorder(
+                      //           borderRadius: BorderRadius.circular(10),
+                      //         ),
+                      //         elevation: 3),
+                      //     child: Text(
+                      //       "Konfirmasi",
+                      //       style: GoogleFonts.getFont("Poppins",
+                      //           color: Colors.white,
+                      //           fontWeight: FontWeight.bold,
+                      //           fontSize: 20),
+                      //     )),
                       SizedBox(
                         width: 20,
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          CoolAlert.show(
+                              backgroundColor: Color(0xFFFFAF00),
+                              context: context,
+                              type: CoolAlertType.confirm,
+                              title: "Anda Yakin?",
+                              text:
+                                  "Jika sudah yakin, lakukan pembayaran pada rekening berikut\n 932-1642-8264-5783.\n Kemudian kirimkan bukti pembayaran melalui WhatsApp.\nTunggu transaksi anda dikonfirmasi dan pantau di menu Monitoring",
+                              onConfirmBtnTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => navBottom()));
+                              });
+                        },
                         style: ElevatedButton.styleFrom(
-                            primary: Color(0xFFFFAF00),
+                            primary: Colors.green[900],
                             onPrimary: Colors.white,
                             minimumSize: Size(100, 50),
                             shape: RoundedRectangleBorder(
