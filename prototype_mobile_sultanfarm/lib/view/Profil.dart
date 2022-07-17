@@ -2,9 +2,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/model/ColorPallet.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage1 extends StatelessWidget {
+class ProfilePage1 extends StatefulWidget {
   const ProfilePage1({Key? key}) : super(key: key);
 
+  @override
+  State<ProfilePage1> createState() => _ProfilePage1State();
+}
+
+class _ProfilePage1State extends State<ProfilePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,9 +63,14 @@ class ProfilePage1 extends StatelessWidget {
   }
 }
 
-class _ProfileInfoRow extends StatelessWidget {
+class _ProfileInfoRow extends StatefulWidget {
   const _ProfileInfoRow({Key? key}) : super(key: key);
 
+  @override
+  State<_ProfileInfoRow> createState() => _ProfileInfoRowState();
+}
+
+class _ProfileInfoRowState extends State<_ProfileInfoRow> {
   final List<ProfileInfoItem> _items = const [
     ProfileInfoItem("Konfirmasi", 0),
     ProfileInfoItem("Diproses", 0),
@@ -114,9 +124,14 @@ class ProfileInfoItem {
   const ProfileInfoItem(this.title, this.value);
 }
 
-class _TopPortion extends StatelessWidget {
+class _TopPortion extends StatefulWidget {
   const _TopPortion({Key? key}) : super(key: key);
 
+  @override
+  State<_TopPortion> createState() => _TopPortionState();
+}
+
+class _TopPortionState extends State<_TopPortion> {
   @override
   Widget build(BuildContext context) {
     return Stack(

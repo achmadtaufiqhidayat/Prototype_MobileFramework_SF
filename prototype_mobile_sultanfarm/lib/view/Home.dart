@@ -3,8 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-investasi.dart';
 import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-paketbreeding.dart';
 import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-realtimemonitoring.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/Breeding.dart';
 import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-domba.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-paketbreeding.dart';
+
 import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-realtimemonitoring.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -344,7 +345,7 @@ class _HomeState extends State<Home> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  menuPaketBreeding()));
+                                                  BreedingPage1()));
                                     },
                                   ),
                                 ),
