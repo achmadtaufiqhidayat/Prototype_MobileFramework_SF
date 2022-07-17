@@ -83,12 +83,12 @@ class _AkadState extends State<Akad> {
                   SizedBox(
                     height: 15,
                   ),
-                  // Text(
-                  //   "Jika sudah yakin, lakukan pembayaran pada nomor berikut\n 932-1642-8264-5783.\nKemudian kirimkan bukti pembayaran.",
-                  //   style: GoogleFonts.getFont("Poppins",
-                  //       color: Colors.black, fontSize: 16),
-                  //   textAlign: TextAlign.center,
-                  // ),
+                  Text(
+                    "Jika sudah yakin, lakukan pembayaran pada nomor berikut\n 932-1642-8264-5783.\nKemudian kirimkan bukti pembayaran di WhatsApp.",
+                    style: GoogleFonts.getFont("Poppins",
+                        color: Colors.black, fontSize: 16),
+                    textAlign: TextAlign.center,
+                  ),
                   SizedBox(
                     height: 100,
                   ),
@@ -142,10 +142,10 @@ class _AkadState extends State<Akad> {
                           CoolAlert.show(
                               backgroundColor: Color(0xFFFFAF00),
                               context: context,
-                              type: CoolAlertType.confirm,
-                              title: "Anda Yakin?",
+                              type: CoolAlertType.success,
+                              title: "Selamat",
                               text:
-                                  "Jika sudah yakin, lakukan pembayaran pada rekening berikut\n 932-1642-8264-5783.\n Kemudian kirimkan bukti pembayaran melalui WhatsApp.\nTunggu transaksi anda dikonfirmasi dan pantau di menu Monitoring",
+                                  "Permintaan sedang diproses, tunggu transaksi anda dikonfirmasi dan pantau di menu Monitoring",
                               onConfirmBtnTap: () {
                                 Navigator.push(
                                     context,
