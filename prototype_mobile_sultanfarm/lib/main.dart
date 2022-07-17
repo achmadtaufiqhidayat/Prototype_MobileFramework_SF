@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sultan Farm',
-      home: detailMonitoring(),
+      home: SplashScreen(),
     );
   }
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:prototype_mobile_sultanfarm/view/Domba.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:prototype_mobile_sultanfarm/view/Profil.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/Breeding.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-realtimemonitoring.dart';
 
 class navBottom extends StatefulWidget {
   const navBottom({Key? key}) : super(key: key);
@@ -12,7 +14,13 @@ class navBottom extends StatefulWidget {
 
 class _navBottomState extends State<navBottom> {
   int _selectedIndex = 0;
-  final List<Widget> screens = [Home(), Domba(), ProfilePage1()];
+  final List<Widget> screens = [
+    Home(),
+    Domba(),
+    BreedingPage1(),
+    menuRealtimeMonitoring(),
+    ProfilePage1()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +53,16 @@ const _navBarItems = [
     icon: Icon(Icons.pets_outlined),
     activeIcon: Icon(Icons.pets_rounded),
     label: 'Domba',
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.insights_outlined),
+    activeIcon: Icon(Icons.inbox_rounded),
+    label: 'Breeding',
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.connected_tv_outlined),
+    activeIcon: Icon(Icons.car_crash_rounded),
+    label: 'Monitoring',
   ),
   BottomNavigationBarItem(
     icon: Icon(Icons.person_outline_rounded),
