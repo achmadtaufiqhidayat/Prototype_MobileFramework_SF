@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-investasi.dart';
+import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-paketbreeding.dart';
+import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-realtimemonitoring.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -263,11 +266,12 @@ class _HomeState extends State<Home> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                                  // EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                                  EdgeInsets.all(5),
                               child: SingleChildScrollView(
                                 child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
+                                  // mainAxisSize: MainAxisSize.max,
+                                  children: <Widget>[
                                     Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: Colors.white,
@@ -275,7 +279,7 @@ class _HomeState extends State<Home> {
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       child: Stack(
-                                        children: [
+                                        children: <Widget>[
                                           Container(
                                             width: double.infinity,
                                             height: 200,
@@ -288,7 +292,7 @@ class _HomeState extends State<Home> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Image.asset(
-                                                  'assets/images/pexels-photo-8345462-copy.jpeg',
+                                                  'assets/images/artikel/breeding2.jpg',
                                                   width: double.infinity,
                                                   height: 135,
                                                   fit: BoxFit.cover,
@@ -296,38 +300,162 @@ class _HomeState extends State<Home> {
                                                 Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(8, 8, 8, 8),
-                                                  child: Text(
-                                                    'Artikel Paket Breeding ',
-                                                    style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      fontSize: 20,
+                                                  child: TextButton(
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  artikelPaketBreeding()));
+                                                    },
+                                                    child: Text(
+                                                      'Artikel Paket Breeding',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                              "Poppins",
+                                                              fontSize: 18),
+                                                    ),
+                                                    style: TextButton.styleFrom(
+                                                      primary: Colors.black,
+                                                      maximumSize: Size(
+                                                          double.infinity, 200),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .circular(8),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                          TextButton(
-                                            onPressed: () {},
-                                            child: Text(
-                                              '',
+                                        ],
+                                      ),
+                                    ),
+                                    //artikel 2
+                                    Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Stack(
+                                        children: <Widget>[
+                                          Container(
+                                            width: double.infinity,
+                                            height: 200,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
                                             ),
-                                            style: TextButton.styleFrom(
-                                              primary: Colors.transparent,
-                                              maximumSize:
-                                                  Size(double.infinity, 200),
-                                              shape: new RoundedRectangleBorder(
-                                                borderRadius:
-                                                    new BorderRadius.circular(
-                                                        8),
-                                              ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/artikel/rupiah.jpg',
+                                                  width: double.infinity,
+                                                  height: 135,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(8, 8, 8, 8),
+                                                  child: TextButton(
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  artikelInvestasi()));
+                                                    },
+                                                    child: Text(
+                                                      'Artikel Investasi Syariah',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                              "Poppins",
+                                                              fontSize: 18),
+                                                    ),
+                                                    style: TextButton.styleFrom(
+                                                      primary: Colors.black,
+                                                      maximumSize: Size(
+                                                          double.infinity, 200),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .circular(8),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ],
                                       ),
                                     ),
+                                    Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Stack(children: <Widget>[
+                                        Container(
+                                          width: double.infinity,
+                                          height: 200,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Image.asset(
+                                                'assets/images/artikel/cctv.jpg',
+                                                width: double.infinity,
+                                                height: 135,
+                                                fit: BoxFit.cover,
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(8, 8, 8, 8),
+                                                child: TextButton(
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                artikelPaketBreeding()));
+                                                  },
+                                                  child: Text(
+                                                    'Artikel Realtime Monitoring',
+                                                    style: GoogleFonts.getFont(
+                                                        "Poppins",
+                                                        fontSize: 18),
+                                                  ),
+                                                  style: TextButton.styleFrom(
+                                                    primary: Colors.black,
+                                                    maximumSize: Size(
+                                                        double.infinity, 200),
+                                                    shape:
+                                                        new RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          new BorderRadius
+                                                              .circular(8),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ]),
+                                    )
                                   ],
                                 ),
                               ),

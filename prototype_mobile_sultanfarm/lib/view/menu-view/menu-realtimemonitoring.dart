@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-monitoring.dart';
 
@@ -28,7 +29,7 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
           ),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Home()));
+                context, MaterialPageRoute(builder: (context) => navBottom()));
           },
         ),
         title: Text(
