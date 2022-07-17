@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/view/Profil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({Key? key}) : super(key: key);
@@ -77,6 +78,11 @@ class SecondPage extends StatelessWidget {
   final int heroTag;
   const SecondPage({required this.heroTag});
 
+  _lauchW(String nomor, String pesan) async {
+    String url = "https://wa.me/+62$nomor?text=${Uri.parse(pesan)}";
+    await canLaunch(url) ? launch(url) : print("Tidak Bisa Buka WhatsApp");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +111,7 @@ class SecondPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  _Deskripsi[heroTag],
+                  "Dengan harga " + _Harga[heroTag] + _Deskripsi[heroTag],
                   textAlign: TextAlign.justify,
                   style: GoogleFonts.getFont(
                     'Poppins',
@@ -252,7 +258,10 @@ class SecondPage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      _lauchW("85101813779",
+                          "Saya ingin mengetahui lebih lanjut tentang paket domba ini :\n Nama Paket $_Judul[heroTag]");
+                    },
                   ),
                   SizedBox(
                     width: 20,
@@ -292,7 +301,8 @@ final List<String> _images = [
 ];
 final List<String> _Judul = ['A', 'B', 'C'];
 final List<String> _Deskripsi = [
-  "Memilih paket investasi ini, anda akan mendapatkan 3 domba jantan dan 6 domba betina yang akan dikelola oleh mudharib (pengelola)",
-  "Memilih paket investasi ini, anda akan mendapatkan 3 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)",
-  "Memilih paket investasi ini, anda akan mendapatkan 2 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)"
+  ", anda akan mendapatkan 3 domba jantan dan 6 domba betina yang akan dikelola oleh mudharib (pengelola)",
+  ", anda akan mendapatkan 3 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)",
+  ", anda akan mendapatkan 2 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)"
 ];
+final List<String> _Harga = ["Rp 10.000.000", "Rp 8.000.000", "Rp 6.000.000"];
