@@ -42,7 +42,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: Image.asset(
-              'images/bg_loginregister.jpg',
+              'assets/images/bg_loginregister.jpg',
             ).image,
           ),
         ),
@@ -72,7 +72,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Image.asset(
-                            'images/logo.png',
+                            'assets/images/logo.png',
                           ),
                         ),
                         Expanded(

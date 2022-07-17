@@ -79,7 +79,7 @@ class _detailJenisDombaState extends State<detailJenisDomba> {
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(8),
                                   child: Image.asset(
-                                    'images/domba/domba-batur.jpg',
+                                    'assets/images/domba/domba-batur.jpg',
                                     width: double.infinity,
                                     height: 100,
                                     fit: BoxFit.cover,

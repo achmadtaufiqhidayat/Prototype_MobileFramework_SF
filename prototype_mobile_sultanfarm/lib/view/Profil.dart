@@ -176,7 +176,7 @@ class _TopPortionState extends State<_TopPortion> {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: Image.asset(
-                        'images/woman.png',
+                        'assets/images/woman.png',
                       ).image,
                     ),
                   ),

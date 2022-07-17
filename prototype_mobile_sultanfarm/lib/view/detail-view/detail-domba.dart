@@ -50,7 +50,7 @@ class _detailDombaState extends State<detailDomba> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Image.asset(
-              'images/domba/domba-batur.jpg',
+              'assets/images/domba/domba-batur.jpg',
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
@@ -162,7 +162,7 @@ class _detailDombaState extends State<detailDomba> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
-                  'images/domba/domba-batur2.jpeg',
+                  'assets/images/domba/domba-batur2.jpeg',
                   width: 350,
                   height: 250,
                   fit: BoxFit.cover,

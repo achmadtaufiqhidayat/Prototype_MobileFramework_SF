@@ -82,7 +82,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-batur.jpg',
+                                          'assets/images/domba/domba-batur.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -159,7 +159,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-texel.jpg',
+                                          'assets/images/domba/domba-texel.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -245,7 +245,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-sopas.jpg',
+                                          'assets/images/domba/domba-sopas.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -322,7 +322,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-merino.jpg',
+                                          'assets/images/domba/domba-merino.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -408,7 +408,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-dormas-super.jpg',
+                                          'assets/images/domba/domba-dormas-super.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -485,7 +485,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-crossing-dormas.jpg',
+                                          'assets/images/domba/domba-crossing-dormas.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -571,7 +571,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-lokal.jpg',
+                                          'assets/images/domba/domba-lokal.jpg',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -648,7 +648,7 @@ class _menuDombaState extends State<menuDomba> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
-                                          'images/domba/domba-crossing-lokal.png',
+                                          'assets/images/domba/domba-crossing-lokal.png',
                                           width: double.infinity,
                                           height: 120,
                                           fit: BoxFit.cover,
