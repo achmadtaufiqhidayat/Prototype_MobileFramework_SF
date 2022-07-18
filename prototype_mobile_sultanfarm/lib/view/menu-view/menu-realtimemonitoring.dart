@@ -21,17 +21,17 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
       appBar: AppBar(
         backgroundColor: Color(0xFFFFAF00),
         automaticallyImplyLeading: false,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => navBottom()));
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(
+        //     Icons.arrow_back_rounded,
+        //     color: Colors.white,
+        //     size: 30,
+        //   ),
+        //   onPressed: () {
+        //     Navigator.push(
+        //         context, MaterialPageRoute(builder: (context) => navBottom()));
+        //   },
+        // ),
         title: Text(
           'Realtime Monitoring',
           style: GoogleFonts.getFont(
