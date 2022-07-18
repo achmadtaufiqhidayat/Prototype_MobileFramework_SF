@@ -115,7 +115,7 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(8),
                                     child: Image.asset(
-                                      'images/bg_loginregister.jpg',
+                                      'assets/images/bg_loginregister.jpg',
                                       width: 130,
                                       height: 130,
                                       fit: BoxFit.cover,
