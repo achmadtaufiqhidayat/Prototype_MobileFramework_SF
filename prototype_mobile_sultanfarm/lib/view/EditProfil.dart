@@ -39,7 +39,7 @@ class _editProfState extends State<editProf> {
         padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: ListView(
           children: [
-            SizedBox(height: 25.0),
+            SizedBox(height: 10.0),
             // Container(
             //   height: 50,
             //   alignment: Alignment.centerLeft,
@@ -117,7 +117,7 @@ class _editProfState extends State<editProf> {
                 ),
               ),
             ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 10.0),
             // Container(
             //   height: 50,
             //   alignment: Alignment.centerLeft,
@@ -178,7 +178,7 @@ class _editProfState extends State<editProf> {
             //             ?.apply(color: Colors.grey.shade500)),
             //   ),
             // ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 10.0),
             Container(
               height: 50,
               alignment: Alignment.centerLeft,
@@ -220,7 +220,7 @@ class _editProfState extends State<editProf> {
                 ),
               ),
             ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 10.0),
             Container(
               height: 50,
               alignment: Alignment.centerLeft,
