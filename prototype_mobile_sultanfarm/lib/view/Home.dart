@@ -156,7 +156,7 @@ class _HomeState extends State<Home> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Image.asset(
-                                                  'assets/images/biegun-wschodni-vD3L-rN_qNw-unsplash.jpg',
+                                                  'assets/images/domba/domba-batur.jpg',
                                                   width: double.infinity,
                                                   height: 100,
                                                   fit: BoxFit.cover,
@@ -165,7 +165,7 @@ class _HomeState extends State<Home> {
                                                   child: TextButton(
                                                     onPressed: () {},
                                                     child: Text(
-                                                      '',
+                                                      'Taxel',
                                                     ),
                                                     style: TextButton.styleFrom(
                                                       primary:
@@ -216,7 +216,7 @@ class _HomeState extends State<Home> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Image.asset(
-                                                  'assets/images/biegun-wschodni-vD3L-rN_qNw-unsplash.jpg',
+                                                  'assets/images/domba/domba-lokal.jpg',
                                                   width: double.infinity,
                                                   height: 100,
                                                   fit: BoxFit.cover,
@@ -225,7 +225,7 @@ class _HomeState extends State<Home> {
                                                   child: TextButton(
                                                     onPressed: () {},
                                                     child: Text(
-                                                      '',
+                                                      'Dormas',
                                                     ),
                                                     style: TextButton.styleFrom(
                                                       primary:

@@ -85,7 +85,7 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
                                     shape: BoxShape.circle,
                                   ),
                                   child: Image.asset(
-                                    'images/logo.png',
+                                    'assets/images/logo.png',
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -142,7 +142,7 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
                                             ),
                                           ),
                                           Text(
-                                            'Paket Breeding VIP Sultan',
+                                            'Paket Breeding A',
                                             textAlign: TextAlign.justify,
                                             style: GoogleFonts.getFont(
                                               'Poppins',
@@ -150,7 +150,7 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
                                             ),
                                           ),
                                           Text(
-                                            'Rp 45.500.000',
+                                            'Rp 10.000.000',
                                             style: GoogleFonts.getFont(
                                               'Poppins',
                                               fontWeight: FontWeight.w600,

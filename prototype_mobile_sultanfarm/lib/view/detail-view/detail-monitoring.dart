@@ -45,6 +45,70 @@ class _detailMonitoringState extends State<detailMonitoring> {
         centerTitle: true,
         elevation: 2,
       ),
+      backgroundColor: Color(0x19FFAF00),
+      body: SingleChildScrollView(
+          child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Column(
+              children: [
+                Padding(padding: EdgeInsets.all(10)),
+                Card(
+                  child: Image.asset(
+                    'assets/images/domba/domba-lokal.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Text("Foto Ternak Hari Ini",
+                    style: GoogleFonts.getFont("Poppins",
+                        fontSize: 15, color: Colors.black))
+              ],
+            ),
+            Card(
+              child: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                  ),
+                  Text("Jumlah Domba : ",
+                      style: GoogleFonts.getFont("Poppins",
+                          fontSize: 15, color: Colors.black)),
+                  Text("10 Ekor",
+                      style: GoogleFonts.getFont("Poppins",
+                          fontSize: 15, color: Colors.black))
+                ],
+              ),
+            ),
+            Card(
+              child: Row(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Text("Kondisi : ",
+                      style: GoogleFonts.getFont("Poppins",
+                          fontSize: 15, color: Colors.black)),
+                  Text("Sudah Diberi Pakan",
+                      style: GoogleFonts.getFont("Poppins",
+                          fontSize: 15, color: Colors.black))
+                ],
+              ),
+            ),
+            Card(
+              child: Row(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Text("Sudah Dirawat : ",
+                      style: GoogleFonts.getFont("Poppins",
+                          fontSize: 15, color: Colors.black)),
+                  Text("1 Bulan",
+                      style: GoogleFonts.getFont("Poppins",
+                          fontSize: 15, color: Colors.black))
+                ],
+              ),
+            )
+          ],
+        ),
+      )),
     );
   }
 }

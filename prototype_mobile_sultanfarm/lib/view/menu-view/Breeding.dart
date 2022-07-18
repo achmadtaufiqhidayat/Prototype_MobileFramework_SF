@@ -14,7 +14,7 @@ class BreedingPage1 extends StatelessWidget {
         title: Text("Pilihan Paket Breeding"),
         backgroundColor: Color(0xFFFFAF00),
       ),
-      backgroundColor: Color(0xFFFFAF00),
+      backgroundColor: Color(0x19FFAF00),
       body: Container(
         child: Card(
           child: Container(
