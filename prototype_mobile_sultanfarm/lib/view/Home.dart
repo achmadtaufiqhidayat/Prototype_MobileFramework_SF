@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-investasi.dart';
 import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-paketbreeding.dart';
 import 'package:prototype_mobile_sultanfarm/view/artikel-view/artikel-realtimemonitoring.dart';
+import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-jenisdomba.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _HomeState extends State<Home> {
               ),
               child: Container(
                 width: double.infinity,
-                height: 140,
+                height: 120,
                 decoration: BoxDecoration(
                   color: Color(0xFFFFAF00),
                   borderRadius: BorderRadius.only(
@@ -52,7 +53,7 @@ class _HomeState extends State<Home> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 40, 10, 10),
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 10),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -147,7 +148,7 @@ class _HomeState extends State<Home> {
                                                 BorderRadius.circular(8),
                                           ),
                                           child: Container(
-                                            width: 170,
+                                            width: 160,
                                             height: 150,
                                             decoration: BoxDecoration(
                                               color: Colors.white,
@@ -162,15 +163,31 @@ class _HomeState extends State<Home> {
                                                   fit: BoxFit.cover,
                                                 ),
                                                 Expanded(
-                                                  child: TextButton(
-                                                    onPressed: () {},
+                                                  child: ElevatedButton(
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              builder: (context) =>
+                                                                  detailJenisDomba()));
+                                                    },
                                                     child: Text(
-                                                      'Taxel',
+                                                      'Batur',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                                     ),
-                                                    style: TextButton.styleFrom(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
                                                       primary:
                                                           Color(0xffffaf00),
-                                                      maximumSize: Size(
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
                                                           double.infinity, 40),
                                                       shape:
                                                           new RoundedRectangleBorder(
@@ -207,7 +224,378 @@ class _HomeState extends State<Home> {
                                                 BorderRadius.circular(8),
                                           ),
                                           child: Container(
-                                            width: 170,
+                                            width: 160,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/domba/domba-texel.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      'Texel',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 160,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/domba/domba-sopas.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      'Sopas',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 160,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/domba/domba-merino.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      'Merino',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 160,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/domba/domba-dormas-super.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      'Dormas Super',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 160,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/domba/domba-crossing-dormas.jpg',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      'Crossing Dormas',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 160,
                                             height: 150,
                                             decoration: BoxDecoration(
                                               color: Colors.white,
@@ -222,15 +610,95 @@ class _HomeState extends State<Home> {
                                                   fit: BoxFit.cover,
                                                 ),
                                                 Expanded(
-                                                  child: TextButton(
+                                                  child: ElevatedButton(
                                                     onPressed: () {},
                                                     child: Text(
-                                                      'Dormas',
+                                                      'Lokal',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                                     ),
-                                                    style: TextButton.styleFrom(
+                                                    style: ElevatedButton
+                                                        .styleFrom(
                                                       primary:
                                                           Color(0xffffaf00),
-                                                      maximumSize: Size(
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
+                                                          double.infinity, 40),
+                                                      shape:
+                                                          new RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            new BorderRadius
+                                                                .only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  8),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Card(
+                                          clipBehavior:
+                                              Clip.antiAliasWithSaveLayer,
+                                          color: Colors.white,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Container(
+                                            width: 160,
+                                            height: 150,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/domba/domba-crossing-lokal.png',
+                                                  width: double.infinity,
+                                                  height: 100,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                Expanded(
+                                                  child: ElevatedButton(
+                                                    onPressed: () {},
+                                                    child: Text(
+                                                      'Crossing Lokal',
+                                                      style:
+                                                          GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      primary:
+                                                          Color(0xffffaf00),
+                                                      onPrimary: Colors.white,
+                                                      minimumSize: Size(
                                                           double.infinity, 40),
                                                       shape:
                                                           new RoundedRectangleBorder(
@@ -271,6 +739,7 @@ class _HomeState extends State<Home> {
                               child: SingleChildScrollView(
                                 child: Column(
                                   // mainAxisSize: MainAxisSize.max,
+                                  // artikel
                                   children: <Widget>[
                                     Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -297,33 +766,45 @@ class _HomeState extends State<Home> {
                                                   height: 135,
                                                   fit: BoxFit.cover,
                                                 ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(8, 8, 8, 8),
-                                                  child: TextButton(
-                                                    onPressed: () {
-                                                      Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  artikelPaketBreeding()));
-                                                    },
-                                                    child: Text(
-                                                      'Artikel Paket Breeding',
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                              "Poppins",
-                                                              fontSize: 18),
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                artikelPaketBreeding()));
+                                                  },
+                                                  child: Text(
+                                                    'Artikel Paket Breeding',
+                                                    style: GoogleFonts.getFont(
+                                                      'Poppins',
+                                                      color: Colors.black,
+                                                      fontSize: 17,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
-                                                    style: TextButton.styleFrom(
-                                                      primary: Colors.black,
-                                                      maximumSize: Size(
-                                                          double.infinity, 200),
-                                                      shape:
-                                                          new RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            new BorderRadius
-                                                                .circular(8),
+                                                  ),
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Colors.white,
+                                                    onPrimary:
+                                                        Color(0xffffaf00),
+                                                    minimumSize: Size(
+                                                      double.infinity,
+                                                      73,
+                                                    ),
+                                                    shape:
+                                                        new RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          new BorderRadius.only(
+                                                        bottomLeft:
+                                                            Radius.circular(8),
+                                                        bottomRight:
+                                                            Radius.circular(8),
+                                                        topLeft:
+                                                            Radius.circular(0),
+                                                        topRight:
+                                                            Radius.circular(0),
                                                       ),
                                                     ),
                                                   ),
@@ -334,7 +815,6 @@ class _HomeState extends State<Home> {
                                         ],
                                       ),
                                     ),
-                                    //artikel 2
                                     Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: Colors.white,
@@ -360,33 +840,45 @@ class _HomeState extends State<Home> {
                                                   height: 135,
                                                   fit: BoxFit.cover,
                                                 ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(8, 8, 8, 8),
-                                                  child: TextButton(
-                                                    onPressed: () {
-                                                      Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  artikelInvestasi()));
-                                                    },
-                                                    child: Text(
-                                                      'Artikel Investasi Syariah',
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                              "Poppins",
-                                                              fontSize: 18),
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                artikelInvestasi()));
+                                                  },
+                                                  child: Text(
+                                                    'Artikel Investasi Syariah',
+                                                    style: GoogleFonts.getFont(
+                                                      'Poppins',
+                                                      color: Colors.black,
+                                                      fontSize: 17,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
-                                                    style: TextButton.styleFrom(
-                                                      primary: Colors.black,
-                                                      maximumSize: Size(
-                                                          double.infinity, 200),
-                                                      shape:
-                                                          new RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            new BorderRadius
-                                                                .circular(8),
+                                                  ),
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Colors.white,
+                                                    onPrimary:
+                                                        Color(0xffffaf00),
+                                                    minimumSize: Size(
+                                                      double.infinity,
+                                                      73,
+                                                    ),
+                                                    shape:
+                                                        new RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          new BorderRadius.only(
+                                                        bottomLeft:
+                                                            Radius.circular(8),
+                                                        bottomRight:
+                                                            Radius.circular(8),
+                                                        topLeft:
+                                                            Radius.circular(0),
+                                                        topRight:
+                                                            Radius.circular(0),
                                                       ),
                                                     ),
                                                   ),
@@ -421,32 +913,42 @@ class _HomeState extends State<Home> {
                                                 height: 135,
                                                 fit: BoxFit.cover,
                                               ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(8, 8, 8, 8),
-                                                child: TextButton(
-                                                  onPressed: () {
-                                                    Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) =>
-                                                                artikelPaketBreeding()));
-                                                  },
-                                                  child: Text(
-                                                    'Artikel Realtime Monitoring',
-                                                    style: GoogleFonts.getFont(
-                                                        "Poppins",
-                                                        fontSize: 18),
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              artikelRealtimeMonitoring()));
+                                                },
+                                                child: Text(
+                                                  'Artikel Realtime Monitoring',
+                                                  style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    color: Colors.black,
+                                                    fontSize: 17,
+                                                    fontWeight: FontWeight.w600,
                                                   ),
-                                                  style: TextButton.styleFrom(
-                                                    primary: Colors.black,
-                                                    maximumSize: Size(
-                                                        double.infinity, 200),
-                                                    shape:
-                                                        new RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          new BorderRadius
-                                                              .circular(8),
+                                                ),
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.white,
+                                                  onPrimary: Color(0xffffaf00),
+                                                  minimumSize: Size(
+                                                    double.infinity,
+                                                    73,
+                                                  ),
+                                                  shape:
+                                                      new RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        new BorderRadius.only(
+                                                      bottomLeft:
+                                                          Radius.circular(8),
+                                                      bottomRight:
+                                                          Radius.circular(8),
+                                                      topLeft:
+                                                          Radius.circular(0),
+                                                      topRight:
+                                                          Radius.circular(0),
                                                     ),
                                                   ),
                                                 ),

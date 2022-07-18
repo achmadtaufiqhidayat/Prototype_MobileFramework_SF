@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
+import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-domba.dart';
 import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-domba.dart';
 
@@ -28,7 +30,7 @@ class _detailJenisDombaState extends State<detailJenisDomba> {
           ),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => menuDomba()));
+                context, MaterialPageRoute(builder: (context) => navBottom()));
           },
         ),
         title: Text(

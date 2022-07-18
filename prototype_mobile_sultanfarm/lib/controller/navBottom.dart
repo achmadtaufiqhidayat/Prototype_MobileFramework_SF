@@ -56,16 +56,16 @@ const _navBarItems = [
   ),
   BottomNavigationBarItem(
     icon: Icon(Icons.insights_outlined),
-    activeIcon: Icon(Icons.inbox_rounded),
+    activeIcon: Icon(Icons.insights_rounded),
     label: 'Breeding',
   ),
   BottomNavigationBarItem(
     icon: Icon(Icons.connected_tv_outlined),
-    activeIcon: Icon(Icons.car_crash_rounded),
+    activeIcon: Icon(Icons.connected_tv_outlined),
     label: 'Monitoring',
   ),
   BottomNavigationBarItem(
-    icon: Icon(Icons.person_outline_rounded),
+    icon: Icon(Icons.person_outline),
     activeIcon: Icon(Icons.person_rounded),
     label: 'Profile',
   ),
