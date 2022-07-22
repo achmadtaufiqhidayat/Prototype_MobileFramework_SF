@@ -174,8 +174,8 @@ class _DombaState extends State<Domba> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-batur.jpg',
+                                                        child: Image.network(
+                                                          'https://sultanfarm.id/foto/domba/8179f4962ee3151c6aee074647a708f6.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,

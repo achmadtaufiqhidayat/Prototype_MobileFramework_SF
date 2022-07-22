@@ -11,8 +11,18 @@ class BreedingPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Pilihan Paket Breeding"),
+        title: Text(
+          "Pilihan Paket Breeding",
+          style: GoogleFonts.getFont(
+            'Poppins',
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
+        ),
         backgroundColor: Color(0xFFFFAF00),
+        centerTitle: true,
+        elevation: 2,
       ),
       backgroundColor: Color(0x19FFAF00),
       body: Container(

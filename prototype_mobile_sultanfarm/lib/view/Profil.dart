@@ -1,5 +1,5 @@
 import 'package:google_fonts/google_fonts.dart';
-import 'package:prototype_mobile_sultanfarm/loginPage.dart';
+import 'package:prototype_mobile_sultanfarm/login.dart';
 import 'package:prototype_mobile_sultanfarm/model/ColorPallet.dart';
 import 'package:flutter/material.dart';
 import 'package:prototype_mobile_sultanfarm/view/EditProfil.dart';
@@ -50,10 +50,8 @@ class _ProfilePage1State extends State<ProfilePage1> {
                       const SizedBox(width: 16.0),
                       FloatingActionButton.extended(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => LoginPageWidget()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => login()));
                         },
                         heroTag: 'logout',
                         elevation: 0,

@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:prototype_mobile_sultanfarm/controller/Bottom_Nav.dart';
-import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
-import 'package:prototype_mobile_sultanfarm/loginPage.dart';
-import 'package:prototype_mobile_sultanfarm/view/Akad.dart';
-import 'package:prototype_mobile_sultanfarm/view/Domba.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/Breeding.dart';
-import 'package:prototype_mobile_sultanfarm/view/Home.dart';
-import 'package:prototype_mobile_sultanfarm/view/Profil.dart';
-import 'package:prototype_mobile_sultanfarm/view/SplashScreen.dart';
-import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-domba.dart';
-import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-monitoring.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-domba.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-detailRealtime.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-realtimemonitoring.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sultan Farm',
-      home: SplashScreen(),
+      home: menuDetailRealtime(),
     );
   }
 }

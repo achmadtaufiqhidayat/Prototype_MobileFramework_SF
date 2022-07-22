@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
 import 'package:prototype_mobile_sultanfarm/view/Home.dart';
 import 'package:prototype_mobile_sultanfarm/view/detail-view/detail-monitoring.dart';
+import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-detailRealtime.dart';
 
 class menuRealtimeMonitoring extends StatefulWidget {
   const menuRealtimeMonitoring({Key? key}) : super(key: key);
@@ -21,17 +22,6 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
       appBar: AppBar(
         backgroundColor: Color(0xFFFFAF00),
         automaticallyImplyLeading: false,
-        // leading: IconButton(
-        //   icon: Icon(
-        //     Icons.arrow_back_rounded,
-        //     color: Colors.white,
-        //     size: 30,
-        //   ),
-        //   onPressed: () {
-        //     Navigator.push(
-        //         context, MaterialPageRoute(builder: (context) => navBottom()));
-        //   },
-        // ),
         title: Text(
           'Realtime Monitoring',
           style: GoogleFonts.getFont(
@@ -41,7 +31,6 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
             fontSize: 22,
           ),
         ),
-        actions: [],
         centerTitle: true,
         elevation: 2,
       ),
@@ -163,7 +152,7 @@ class _menuRealtimeMonitoringState extends State<menuRealtimeMonitoring> {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          detailMonitoring()));
+                                                          menuDetailRealtime()));
                                             },
                                             style: ElevatedButton.styleFrom(
                                               primary: Color(0xFFFFAF00),

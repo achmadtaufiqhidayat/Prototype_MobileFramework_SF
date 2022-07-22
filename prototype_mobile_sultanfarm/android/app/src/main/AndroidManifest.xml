@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.prototype_mobile_sultanfarm">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="prototype_mobile_sultanfarm"
+        android:label="Sultan Farm"
         android:name="${applicationName}"
         android:icon="@mipmap/logo">
         <activity
