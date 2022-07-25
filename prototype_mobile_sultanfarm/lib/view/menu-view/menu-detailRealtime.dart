@@ -14,6 +14,20 @@ class menuDetailRealtime extends StatefulWidget {
 
 class _menuDetailRealtimeState extends State<menuDetailRealtime> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  DateTime selectedDate = DateTime.now();
+
+  Future<Null> _selectedDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: selectedDate.subtract(Duration(days: 30)),
+        lastDate: DateTime(selectedDate.year + 1));
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +77,11 @@ class _menuDetailRealtimeState extends State<menuDetailRealtime> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Kamis, 21 Juli 2022',
+                        "${selectedDate.toLocal()}".split(' ')[0],
                         style: GoogleFonts.getFont(
                           'Poppins',
-                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
                           fontSize: 12,
                         ),
                       ),

@@ -25,61 +25,78 @@ class BreedingPage1 extends StatelessWidget {
         elevation: 2,
       ),
       backgroundColor: Color(0x19FFAF00),
-      body: Container(
-        child: Card(
-          child: Container(
-            padding: EdgeInsets.only(left: 10, right: 10),
-            child: ListView.builder(
-              itemCount: _images.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Column(
-                  children: <Widget>[
-                    // Padding(
-                    //     padding: EdgeInsets.only(
-                    //         right: 10, left: 10, bottom: 0.1, top: 0.1)),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
-                      shadowColor: Colors.black,
-                      color: Color(0xFFFFAF00),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      SecondPage(heroTag: index)));
-                        },
-                        child: Container(
-                          child: Column(children: <Widget>[
-                            Image.asset(
-                              _images[index],
-                              width: double.infinity,
-                              height: 150,
-                              fit: BoxFit.fill,
-                            ),
-                            Text(
-                              "Paket Breeding " + _Judul[index].toString(),
-                              style: GoogleFonts.getFont(
-                                'Poppins',
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22,
+      body: ListView.builder(
+        itemCount: _images.length,
+        itemBuilder: (BuildContext context, int index) {
+          return SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                  child: Card(
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Color(0xFFF5F5F5),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    SecondPage(heroTag: index)));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        height: 275,
+                        decoration: BoxDecoration(color: Colors.white),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            ClipRRect(
+                              child: Image.asset(
+                                _images[index],
+                                width: double.infinity,
+                                height: 200,
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ]),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                              child: Text(
+                                "PAKET BREEDING " + _Judul[index].toString(),
+                                style: GoogleFonts.getFont(
+                                  'Poppins',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                              child: Text(
+                                _Harga[index],
+                                style: GoogleFonts.getFont(
+                                  'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 20,
-                    )
-                  ],
-                );
-              },
+                  ),
+                ),
+              ],
             ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
@@ -89,6 +106,108 @@ class SecondPage extends StatelessWidget {
   final int heroTag;
   const SecondPage({required this.heroTag});
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Paket Breeding " + _Judul[heroTag].toString()),
+        backgroundColor: Color(0xFFFFAF00),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 250,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Image.asset(
+                  _images[heroTag],
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 100,
+                decoration: BoxDecoration(color: Colors.white),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 300,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFFFAF00),
+                    onPrimary: Colors.white,
+                    minimumSize: Size(double.infinity, 60),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(8),
+                    ),
+                    elevation: 3,
+                  ),
+                  child: Text(
+                    'Lanjut Investasi',
+                    style: GoogleFonts.getFont('Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ThirdPage(
+                                  heroTag: ThirdPage,
+                                )));
+                  }),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ThirdPage extends StatelessWidget {
+  final int heroTag;
+
+  const ThirdPage({required this.heroTag});
+
+  var long = 0;
   _lauchW(String url) async {
     // String url ="https://api.whatsapp.com/send/?phone=$nomor?text=$pesan&type=phone_number&app_absent=0";
     await canLaunch(url) ? launch(url) : print("Tidak Bisa Buka WhatsApp");
@@ -317,9 +436,9 @@ class SecondPage extends StatelessWidget {
 }
 
 final List<String> _images = [
-  'assets/images/slider/paketA.jpg',
-  'assets/images/slider/paketB.jpg',
-  'assets/images/slider/paketC.jpg'
+  'assets/images/paket/paketA.jpg',
+  'assets/images/paket/paketB.jpg',
+  'assets/images/paket/paketC.jpg'
 ];
 final List<String> _Judul = ['A', 'B', 'C'];
 final List<String> _Deskripsi = [

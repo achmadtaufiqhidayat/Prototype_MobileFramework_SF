@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-detailRealtime.dart';
-import 'package:prototype_mobile_sultanfarm/view/menu-view/menu-realtimemonitoring.dart';
+import 'package:prototype_mobile_sultanfarm/controller/navBottom.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sultan Farm',
-      home: menuDetailRealtime(),
+      home: navBottom(),
     );
   }
 }

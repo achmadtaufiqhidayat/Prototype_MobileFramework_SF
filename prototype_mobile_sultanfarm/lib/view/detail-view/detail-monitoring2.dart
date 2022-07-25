@@ -11,6 +11,20 @@ class detailMonitoring2 extends StatefulWidget {
 
 class _detailMonitoring2State extends State<detailMonitoring2> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  DateTime selectedDate = DateTime.now();
+
+  Future<Null> _selectedDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: selectedDate.subtract(Duration(days: 30)),
+        lastDate: DateTime(selectedDate.year + 1));
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +91,7 @@ class _detailMonitoring2State extends State<detailMonitoring2> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              'Kamis, 21 Juli 2022',
+                              "${selectedDate.toLocal()}".split(' ')[0],
                               style: GoogleFonts.getFont(
                                 'Poppins',
                                 color: Colors.black,
@@ -107,7 +121,7 @@ class _detailMonitoring2State extends State<detailMonitoring2> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
-                      height: 200,
+                      height: 150,
                       decoration: BoxDecoration(
                         color: Colors.white,
                       ),
@@ -118,8 +132,40 @@ class _detailMonitoring2State extends State<detailMonitoring2> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Hello World',
-                              style: GoogleFonts.getFont('Poppins'),
+                              'Laporan ternak hari ini',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text(
+                              'Jumlah Domba : 6 ekor',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text(
+                              'Keterangan : 2 Jantan, 4 Betina',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text(
+                              'Kondisi : Sudah diberi pakan',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
                             ),
                           ],
                         ),
