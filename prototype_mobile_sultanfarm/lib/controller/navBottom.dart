@@ -55,13 +55,13 @@ const _navBarItems = [
     label: 'Domba',
   ),
   BottomNavigationBarItem(
-    icon: Icon(Icons.insights_outlined),
-    activeIcon: Icon(Icons.insights_rounded),
+    icon: Icon(Icons.add_chart_rounded),
+    activeIcon: Icon(Icons.add_chart_rounded),
     label: 'Breeding',
   ),
   BottomNavigationBarItem(
-    icon: Icon(Icons.connected_tv_outlined),
-    activeIcon: Icon(Icons.connected_tv_outlined),
+    icon: Icon(Icons.remove_from_queue_rounded),
+    activeIcon: Icon(Icons.remove_from_queue_rounded),
     label: 'Monitoring',
   ),
   BottomNavigationBarItem(

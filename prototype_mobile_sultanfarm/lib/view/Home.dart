@@ -742,86 +742,86 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                              // Generated code for this Column Widget...
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Container(
-                                        width: double.infinity,
-                                        height: 200,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                        ),
-                                        child: Stack(
-                                          children: [
-                                            Container(
-                                              width: double.infinity,
-                                              height: 200,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
+                                child: ListView.builder(
+                                  itemCount: _images.length,
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    return SingleChildScrollView(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    10, 10, 10, 0),
+                                            child: Card(
+                                              clipBehavior:
+                                                  Clip.antiAliasWithSaveLayer,
+                                              color: Color(0xFFF5F5F5),
+                                              shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(8),
+                                                    BorderRadius.circular(15),
                                               ),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  ClipRRect(
-                                                    borderRadius:
-                                                        BorderRadius.only(
-                                                      bottomLeft:
-                                                          Radius.circular(0),
-                                                      bottomRight:
-                                                          Radius.circular(0),
-                                                      topLeft:
-                                                          Radius.circular(10),
-                                                      topRight:
-                                                          Radius.circular(10),
-                                                    ),
-                                                    child: Image.asset(
-                                                      'assets/images/domba/domba.jpg',
-                                                      width: double.infinity,
-                                                      height: 150,
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                8, 8, 8, 8),
-                                                    child: Text(
-                                                      'Artikel Paket Breeding ',
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                        'Poppins',
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                        fontSize: 17,
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              secondPage(
+                                                                  heroTag:
+                                                                      index)));
+                                                },
+                                                child: Container(
+                                                  width: double.infinity,
+                                                  height: 300,
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.white),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      ClipRRect(
+                                                        child: Image.asset(
+                                                          _images[index],
+                                                          width:
+                                                              double.infinity,
+                                                          height: 200,
+                                                          fit: BoxFit.cover,
+                                                        ),
                                                       ),
-                                                    ),
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(0, 10,
+                                                                    0, 0),
+                                                        child: Text(
+                                                          _Judul[index]
+                                                              .toString(),
+                                                          style: GoogleFonts
+                                                              .getFont(
+                                                            'Poppins',
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            fontSize: 20,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
-                                                ],
+                                                ),
                                               ),
                                             ),
-                                            TextButton(
-                                              onPressed: () {},
-                                              child: Text(
-                                                '',
-                                              ),
-                                            )
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
-                                    ],
-                                  ),
+                                    );
+                                  },
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -837,3 +837,29 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+class secondPage extends StatelessWidget {
+  const secondPage({Key? key, required this.heroTag}) : super(key: key);
+  final int heroTag;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
+}
+
+final List<String> _images = [
+  'assets/images/paket/paketA.jpg',
+  'assets/images/paket/paketB.jpg',
+  'assets/images/paket/paketC.jpg'
+];
+final List<String> _Judul = [
+  'Artikel Paket Breeding',
+  'Artikel Investasi Syariah',
+  'Artikel Realtime Monitoring',
+];
+final List<String> _Deskripsi = [
+  "Paket Breeding adalah paket domba yang ditawarkan oleh CV Sultan Farm kepada para calon pelanggan untuk mendapatkan domba berkualitas dengan harga yang terjangkau dan lebih hemat dari membeli domba per sautan. Keuntungan lain dari paket breeding adalah pembelian paket ini selain ditujukan untuk konsumsi, domba dari paket breeding yang dipilih dapat dirawat atau dikelola sampai beranak binak dan hasil atau keuntungan dari penjualan anak domba ini akan dibagi dua antara investor dan pengelola, untuk mengetahui lebih detail tentang pembagian ini silahkan baca artikel selanjutnya tentang Investasi Syariah.",
+  "Investasi syariah merupakan salah satu jenis investasi yang ada di Indonesia yang menggunakan sistem deposito bagi hasil. \nPada umumnya, proses investasi deposito bagi hasil sama dengan deposito di bank konvensional. Bedanya, deposito syariah tidak mematok keuntungan yang bisa didapatkan investor.\n Agar tidak hanya menjadi label syariah, maka CV Sultan Farm menerapkan Akad Mudharabah, yang mana keuntungan akan dibagi dengan sistem bagi hasil dengan ketentuan yang bisa disepakati atau yang paling umum 60% keuntungan untuk pemilik modal dan 40% keuntungan untuk pengelola",
+  "Monitoring adalah layanan yang ditawarkan oleh CV Sultan Farm. Fungsi utama dari penerapan teknologi ini adalah menjamin konidisi kandang agar tetap bersih dan sehat, serta mengawasi keadaan domba. Jika suatu waktu domba mengalami gejala penyakit, ada pencuri dan lain-lain sebagainya maka pengawas dapat memberitahu pengelola supaya segera bertindak.",
+];

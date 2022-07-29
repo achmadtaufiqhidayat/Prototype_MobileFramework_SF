@@ -141,10 +141,15 @@ class SecondPage extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.white),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [],
+                  child: Text(
+                    "Dengan harga " + _Harga[heroTag] + _Deskripsi[heroTag],
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.getFont(
+                      'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                    ),
                   ),
                 ),
               ),
@@ -184,14 +189,14 @@ class SecondPage extends StatelessWidget {
                     style: GoogleFonts.getFont('Poppins',
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black),
+                        color: Colors.white),
                   ),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => ThirdPage(
-                                  heroTag: ThirdPage,
+                                  tigaTag: heroTag,
                                 )));
                   }),
             ),
@@ -202,233 +207,362 @@ class SecondPage extends StatelessWidget {
   }
 }
 
-class ThirdPage extends StatelessWidget {
-  final int heroTag;
+class ThirdPage extends StatefulWidget {
+  final int tigaTag;
 
-  const ThirdPage({required this.heroTag});
+  const ThirdPage({Key? key, required this.tigaTag}) : super(key: key);
 
-  var long = 0;
+  @override
+  State<ThirdPage> createState() => _ThirdPageState(this.tigaTag);
+}
+
+class _ThirdPageState extends State<ThirdPage> {
+  final int tigaTag;
+
+  _ThirdPageState(this.tigaTag);
+
   _lauchW(String url) async {
     // String url ="https://api.whatsapp.com/send/?phone=$nomor?text=$pesan&type=phone_number&app_absent=0";
     await canLaunch(url) ? launch(url) : print("Tidak Bisa Buka WhatsApp");
+  }
+
+  TextEditingController textController1 = new TextEditingController();
+  TextEditingController textController2 = new TextEditingController();
+  TextEditingController textController3 = new TextEditingController();
+  TextEditingController textController4 = new TextEditingController();
+  final formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    super.initState();
+    textController1 = TextEditingController();
+    textController2 = TextEditingController();
+    textController3 = TextEditingController();
+    textController4 = TextEditingController();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Paket Breeding " + _Judul[heroTag].toString()),
+        title: Text("Paket Breeding " + _Judul[tigaTag].toString()),
         backgroundColor: Color(0xFFFFAF00),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Center(
-              child: Container(
-                child: Card(
-                    borderOnForeground: true,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        _images[heroTag],
-                        fit: BoxFit.cover,
-                      ),
-                    )),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Text(
-                  "Dengan harga " + _Harga[heroTag] + _Deskripsi[heroTag],
-                  textAlign: TextAlign.justify,
+                  'Isi Data Diri',
                   style: GoogleFonts.getFont(
                     'Poppins',
-                    color: Colors.black,
+                    fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    fontSize: 13,
+                    color: Colors.black,
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "Nama Anda",
-                      labelStyle: GoogleFonts.getFont('Poppins',
-                          color: Color(0xFFFFAF00), fontSize: 15),
-                      hintText: "Nama Lengkap Anda",
-                      hintStyle: GoogleFonts.getFont("Poppins",
-                          color: Colors.black, fontSize: 12),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 1),
-                          borderRadius: BorderRadius.circular(10)),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 3),
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: Icon(
-                        Icons.person,
-                        color: Color(0xFFFFAF00),
-                        size: 24,
-                      )),
-                ),
-              ),
-            ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "Alamat Anda",
-                      labelStyle: GoogleFonts.getFont('Poppins',
-                          color: Color(0xFFFFAF00), fontSize: 15),
-                      hintText: "Contoh : Jember",
-                      hintStyle: GoogleFonts.getFont("Poppins",
-                          color: Colors.black, fontSize: 12),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 1),
-                          borderRadius: BorderRadius.circular(10)),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 3),
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: Icon(
-                        Icons.location_on,
-                        color: Color(0xFFFFAF00),
-                        size: 24,
-                      )),
-                ),
-              ),
-            ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "No Telp",
-                      labelStyle: GoogleFonts.getFont('Poppins',
-                          color: Color(0xFFFFAF00), fontSize: 15),
-                      hintText: "08xxxxxxx",
-                      hintStyle: GoogleFonts.getFont("Poppins",
-                          color: Colors.black, fontSize: 12),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 1),
-                          borderRadius: BorderRadius.circular(10)),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 3),
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: Icon(
-                        Icons.phone,
-                        color: Color(0xFFFFAF00),
-                        size: 24,
-                      )),
-                ),
-              ),
-            ),
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "Pengelola",
-                      labelStyle: GoogleFonts.getFont('Poppins',
-                          color: Color(0xFFFFAF00), fontSize: 15),
-                      hintText: "Sultan Farm",
-                      hintStyle: GoogleFonts.getFont("Poppins",
-                          color: Colors.black, fontSize: 12),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 1),
-                          borderRadius: BorderRadius.circular(10)),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Color(0xFFFFAF00), width: 3),
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: Icon(
-                        Icons.person,
-                        color: Color(0xFFFFAF00),
-                        size: 24,
-                      )),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 80,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.green[900],
-                        onPrimary: Colors.white,
-                        minimumSize: Size(100, 50),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(15, 15, 15, 15),
+                child: Container(
+                  width: double.infinity,
+                  child: Form(
+                    key: formKey,
+                    autovalidateMode: AutovalidateMode.disabled,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        TextFormField(
+                          controller: textController1,
+                          autofocus: true,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            labelText: 'Nama',
+                            labelStyle: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Color(0xFFFFAF00),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                            hintText: 'Masukkan nama anda',
+                            hintStyle: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFFFAF00),
+                                width: 1,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFFFAF00),
+                                width: 2,
+                              ),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(4.0),
+                                topRight: Radius.circular(4.0),
+                              ),
+                            ),
+                            prefixIcon: Icon(
+                              Icons.person,
+                              color: Color(0xFFFFAF00),
+                              size: 25,
+                            ),
+                          ),
+                          style: GoogleFonts.getFont(
+                            'Poppins',
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
+                          ),
                         ),
-                        elevation: 3),
-                    child: Text(
-                      "Chat",
-                      style: GoogleFonts.getFont("Poppins",
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
-                    ),
-                    onPressed: () {
-                      _lauchW(
-                          "https://api.whatsapp.com/send/?phone=6285101813779&text=Hallo%2C+saya+ingin+mengetahui+lebih+lanjut+tentang+paket+domba+ini\n+Nama+Paket : Paket Breeding " +
-                              _Judul[heroTag] +
-                              ", \nHarga : " +
-                              _Harga[heroTag] +
-                              ", \nSpesifikasi : Dengan harga tersebut " +
-                              _Deskripsi[heroTag] +
-                              ".%2A&type=phone_number&app_absent=0");
-                    },
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFFFAF00),
-                        onPrimary: Colors.white,
-                        minimumSize: Size(100, 50),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          child: TextFormField(
+                            controller: textController2,
+                            autofocus: true,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'NIK',
+                              labelStyle: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Color(0xFFFFAF00),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                              hintText: 'Masukkan nik ktp anda',
+                              hintStyle: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFFFAF00),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFFFAF00),
+                                  width: 2,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.numbers_rounded,
+                                color: Color(0xFFFFAF00),
+                                size: 25,
+                              ),
+                            ),
+                            style: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
                         ),
-                        elevation: 3),
-                    child: Text(
-                      "Lanjut",
-                      style: GoogleFonts.getFont("Poppins",
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          child: TextFormField(
+                            controller: textController1,
+                            autofocus: true,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Alamat',
+                              labelStyle: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Color(0xFFFFAF00),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                              hintText: 'Masukkan alamat anda',
+                              hintStyle: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFFFAF00),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFFFAF00),
+                                  width: 2,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.maps_home_work_rounded,
+                                color: Color(0xFFFFAF00),
+                                size: 25,
+                              ),
+                            ),
+                            style: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          child: TextFormField(
+                            controller: textController1,
+                            autofocus: true,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Nomor Handphone',
+                              labelStyle: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Color(0xFFFFAF00),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                              hintText: 'Masukkan nomor handphone anda',
+                              hintStyle: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              ),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFFFAF00),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFFFAF00),
+                                  width: 2,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              prefixIcon: Icon(
+                                Icons.mobile_friendly_rounded,
+                                color: Color(0xFFFFAF00),
+                                size: 25,
+                              ),
+                            ),
+                            style: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFFFFAF00),
+                              onPrimary: Colors.white,
+                              elevation: 3,
+                              minimumSize: Size(double.infinity, 60),
+                              shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(8),
+                              ),
+                            ),
+                            child: Text(
+                              'Simpan Data',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {},
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 10),
+                          child: Text(
+                            'Klik tombol lanjut dibawah ini setelah melakukan pengisian dan menyimpanan data untuk melanjutkan akad',
+                            style: GoogleFonts.getFont(
+                              'Poppins',
+                              fontSize: 12,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFFFFAF00),
+                              onPrimary: Colors.white,
+                              elevation: 3,
+                              minimumSize: Size(double.infinity, 60),
+                              shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(8),
+                              ),
+                            ),
+                            child: Text(
+                              'Lanjut',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Akad()));
+                            },
+                          ),
+                        ),
+                      ],
                     ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Akad()));
-                    },
                   ),
-                ],
+                ),
               ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -442,8 +576,8 @@ final List<String> _images = [
 ];
 final List<String> _Judul = ['A', 'B', 'C'];
 final List<String> _Deskripsi = [
-  ", Anda akan mendapatkan 3 domba jantan dan 6 domba betina yang akan dikelola oleh mudharib (pengelola)",
-  ", Anda akan mendapatkan 3 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)",
-  ", Anda akan mendapatkan 2 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola)"
+  ", Anda akan mendapatkan 3 domba jantan dan 6 domba betina yang akan dikelola oleh mudharib (pengelola) yang akan dikelola selama 1 tahun",
+  ", Anda akan mendapatkan 3 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola) yang akan dikelola selama 1 tahun",
+  ", Anda akan mendapatkan 2 domba jantan dan 4 domba betina yang akan dikelola oleh mudharib (pengelola) yang akan dikelola selama 1 tahun"
 ];
 final List<String> _Harga = ["Rp 10.000.000", "Rp 8.000.000", "Rp 6.000.000"];
