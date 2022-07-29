@@ -175,7 +175,7 @@ class _DombaState extends State<Domba> {
                                                             BorderRadius
                                                                 .circular(8),
                                                         child: Image.network(
-                                                          'https://sultanfarm.id/foto/domba/8179f4962ee3151c6aee074647a708f6.jpg',
+                                                          'https://sultanfarm.id/foto/domba/51fdd950316a0e275375c28269df6947.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,
@@ -213,7 +213,7 @@ class _DombaState extends State<Domba> {
                                                             AlignmentDirectional(
                                                                 -1, 0),
                                                         child: Text(
-                                                          'Bobot 13 Kg\nUmur 2 Bulan',
+                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 26 Hari',
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: GoogleFonts
@@ -310,8 +310,8 @@ class _DombaState extends State<Domba> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
+                                                        child: Image.network(
+                                                          'https://sultanfarm.id/foto/domba/e38fe156b3ed1cfbf2386077ea31723a.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,
@@ -349,7 +349,7 @@ class _DombaState extends State<Domba> {
                                                             AlignmentDirectional(
                                                                 -1, 0),
                                                         child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
+                                                          'Bobot 25 Kg\nUmur 1 Tahun 4 Bulan 26 Hari',
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: GoogleFonts
@@ -450,8 +450,8 @@ class _DombaState extends State<Domba> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
+                                                        child: Image.network(
+                                                          'https://sultanfarm.id/foto/domba/f41bc168398dd9cb3d77abfba87ee8ab.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,
@@ -489,7 +489,7 @@ class _DombaState extends State<Domba> {
                                                             AlignmentDirectional(
                                                                 -1, 0),
                                                         child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
+                                                          'Bobot 59 Kg\nUmur 1 Tahun 2 Bulan 21 Hari',
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: GoogleFonts
@@ -579,8 +579,8 @@ class _DombaState extends State<Domba> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
+                                                        child: Image.network(
+                                                          'https://sultanfarm.id/foto/domba/a0ca12a0b258cc960767d0b2d68de8ac.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,
@@ -618,276 +618,7 @@ class _DombaState extends State<Domba> {
                                                             AlignmentDirectional(
                                                                 -1, 0),
                                                         child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: GoogleFonts
-                                                              .getFont(
-                                                            'Poppins',
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            fontSize: 12,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0, 8, 0, 0),
-                                                        child: ElevatedButton(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            primary: Color(
-                                                                0xFFFFAF00),
-                                                            onPrimary:
-                                                                Colors.black,
-                                                            minimumSize: Size(
-                                                                double.infinity,
-                                                                40),
-                                                            shape:
-                                                                new RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  new BorderRadius
-                                                                      .circular(8),
-                                                            ),
-                                                            side: BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 0,
-                                                            ),
-                                                            elevation: 2,
-                                                          ),
-                                                          child: Text(
-                                                            'Info Detail',
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 5, 0, 0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Expanded(
-                                            child: Card(
-                                              clipBehavior:
-                                                  Clip.antiAliasWithSaveLayer,
-                                              color: Colors.white,
-                                              elevation: 3,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(8, 8, 8, 8),
-                                                child: Container(
-                                                  width: double.infinity,
-                                                  height: 260,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.white,
-                                                  ),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
-                                                          width:
-                                                              double.infinity,
-                                                          height: 120,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(0,
-                                                                      8, 0, 0),
-                                                          child: Text(
-                                                            'Dormas Super',
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: GoogleFonts
-                                                              .getFont(
-                                                            'Poppins',
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            fontSize: 12,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0, 8, 0, 0),
-                                                        child: ElevatedButton(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            primary: Color(
-                                                                0xFFFFAF00),
-                                                            onPrimary:
-                                                                Colors.black,
-                                                            minimumSize: Size(
-                                                                double.infinity,
-                                                                40),
-                                                            shape:
-                                                                new RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  new BorderRadius
-                                                                      .circular(8),
-                                                            ),
-                                                            side: BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 0,
-                                                            ),
-                                                            elevation: 2,
-                                                          ),
-                                                          child: Text(
-                                                            'Info Detail',
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Card(
-                                              clipBehavior:
-                                                  Clip.antiAliasWithSaveLayer,
-                                              color: Colors.white,
-                                              elevation: 3,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(8, 8, 8, 8),
-                                                child: Container(
-                                                  width: double.infinity,
-                                                  height: 260,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.white,
-                                                  ),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
-                                                          width:
-                                                              double.infinity,
-                                                          height: 120,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(0,
-                                                                      8, 0, 0),
-                                                          child: Text(
-                                                            'Dormas Super',
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
+                                                          'Bobot 63 Kg\nUmur 1 Tahun 7 Bulan 4 Hari',
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: GoogleFonts
@@ -988,8 +719,8 @@ class _DombaState extends State<Domba> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
+                                                        child: Image.network(
+                                                          'https://sultanfarm.id/foto/domba/d16e77f543e21d87e83435db1b058f96.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,
@@ -1027,7 +758,7 @@ class _DombaState extends State<Domba> {
                                                             AlignmentDirectional(
                                                                 -1, 0),
                                                         child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
+                                                          'Bobot 63 Kg\nUmur 1 Tahun 7 Bulan 5 Hari',
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: GoogleFonts
@@ -1117,8 +848,8 @@ class _DombaState extends State<Domba> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
+                                                        child: Image.network(
+                                                          'https://sultanfarm.id/foto/domba/a48fdf5b33d61aca08df6bd59d452a92.jpg',
                                                           width:
                                                               double.infinity,
                                                           height: 120,
@@ -1156,276 +887,7 @@ class _DombaState extends State<Domba> {
                                                             AlignmentDirectional(
                                                                 -1, 0),
                                                         child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: GoogleFonts
-                                                              .getFont(
-                                                            'Poppins',
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            fontSize: 12,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0, 8, 0, 0),
-                                                        child: ElevatedButton(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            primary: Color(
-                                                                0xFFFFAF00),
-                                                            onPrimary:
-                                                                Colors.black,
-                                                            minimumSize: Size(
-                                                                double.infinity,
-                                                                40),
-                                                            shape:
-                                                                new RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  new BorderRadius
-                                                                      .circular(8),
-                                                            ),
-                                                            side: BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 0,
-                                                            ),
-                                                            elevation: 2,
-                                                          ),
-                                                          child: Text(
-                                                            'Info Detail',
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 5, 0, 0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Expanded(
-                                            child: Card(
-                                              clipBehavior:
-                                                  Clip.antiAliasWithSaveLayer,
-                                              color: Colors.white,
-                                              elevation: 3,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(8, 8, 8, 8),
-                                                child: Container(
-                                                  width: double.infinity,
-                                                  height: 260,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.white,
-                                                  ),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
-                                                          width:
-                                                              double.infinity,
-                                                          height: 120,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(0,
-                                                                      8, 0, 0),
-                                                          child: Text(
-                                                            'Dormas Super',
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: GoogleFonts
-                                                              .getFont(
-                                                            'Poppins',
-                                                            color: Colors.black,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                            fontSize: 12,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0, 8, 0, 0),
-                                                        child: ElevatedButton(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            primary: Color(
-                                                                0xFFFFAF00),
-                                                            onPrimary:
-                                                                Colors.black,
-                                                            minimumSize: Size(
-                                                                double.infinity,
-                                                                40),
-                                                            shape:
-                                                                new RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  new BorderRadius
-                                                                      .circular(8),
-                                                            ),
-                                                            side: BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 0,
-                                                            ),
-                                                            elevation: 2,
-                                                          ),
-                                                          child: Text(
-                                                            'Info Detail',
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Card(
-                                              clipBehavior:
-                                                  Clip.antiAliasWithSaveLayer,
-                                              color: Colors.white,
-                                              elevation: 3,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(8, 8, 8, 8),
-                                                child: Container(
-                                                  width: double.infinity,
-                                                  height: 260,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.white,
-                                                  ),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                        child: Image.asset(
-                                                          'assets/images/domba/domba-dormas-super.jpg',
-                                                          width:
-                                                              double.infinity,
-                                                          height: 120,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(0,
-                                                                      8, 0, 0),
-                                                          child: Text(
-                                                            'Dormas Super',
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                            style: GoogleFonts
-                                                                .getFont(
-                                                              'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              fontSize: 15,
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1, 0),
-                                                        child: Text(
-                                                          'Bobot 43 Kg\nUmur 1 Tahun 4 Bulan 9 Hari',
+                                                          'Bobot 63 Kg\nUmur 1 Tahun 10 Bulan 11 Hari',
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: GoogleFonts
